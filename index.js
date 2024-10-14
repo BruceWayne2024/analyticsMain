@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const firstList = ["shoppiejapanclothes", "shinkansenfacts", "osakastreetbites", "hikokilove"];
+const firstList = ["shoppiejapanclothes", "shinkansenfood", "osakastreetbites", "hikokilove"];
 const secondList = [];
 const thirdList = [];
 const fourthList = [];
@@ -17,7 +17,7 @@ const sixthList = [];
 const baseDomains = [
   "osakastreetbites.services",
   "shoppiejapanclothes.info",
-  "shinkansenfacts.us",
+  "shinkansenfood.shop",
   "hikokilove.us",
 ];
 
