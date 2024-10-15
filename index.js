@@ -6,8 +6,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const secretKey = "bruceisgenius";
-
 const firstList = ["shoppiejapanclothes", "shinkansenfood", "osakastreetbites", "hikokilove"];
 const secondList = [];
 const thirdList = [];
@@ -65,20 +63,6 @@ const checkReferrer = (req, res, next) => {
     res.status(403).send("Access forbidden");
   }
 };
-
-// New route to send the secret key
-app.get("/get-secret-key", (req, res) => {
-  const referer = req.headers.referer;
-  const origin = req.headers.origin;
-
-  // Check if the request origin or referrer matches allowed URLs
-  if ((referer && allowedUrls.some((url) => referer.startsWith(url))) || 
-      (origin && allowedUrls.includes(origin))) {
-    res.json({ secretKey }); // Send the secret key as JSON
-  } else {
-    res.status(403).send("Access forbidden"); // If not allowed, return 403
-  }
-});
 
 const handleRequest = (req, res) => {
   console.log('request aa gyi');
