@@ -54,7 +54,9 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const checkReferrer = (req, res, next) => {
+  console.log('referrer checked');
   const referer = req.headers.referer;
+  console.log(referer);
   if (referer && allowedUrls.some((url) => referer.startsWith(url))) {
     next();
   } else {
@@ -63,9 +65,10 @@ const checkReferrer = (req, res, next) => {
 };
 
 const handleRequest = (req, res) => {
+  console.log('request aa gyi');
   const fullUrl = req.headers.referer || req.headers.referrer;
+  console.log(fullUrl);
   if (firstList.some(item => fullUrl.includes(item))) {
-    console.log('request aa gyi');
     res.sendFile(path.join(__dirname, "firstNumber.html"));
   } else if (secondList.some(item => fullUrl.includes(item))) {
     res.sendFile(path.join(__dirname, "secondNumber.html"));
