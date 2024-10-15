@@ -65,6 +65,7 @@ const checkReferrer = (req, res, next) => {
 const handleRequest = (req, res) => {
   const fullUrl = req.headers.referer || req.headers.referrer;
   if (firstList.some(item => fullUrl.includes(item))) {
+    console.log('request aa gyi');
     res.sendFile(path.join(__dirname, "firstNumber.html"));
   } else if (secondList.some(item => fullUrl.includes(item))) {
     res.sendFile(path.join(__dirname, "secondNumber.html"));
