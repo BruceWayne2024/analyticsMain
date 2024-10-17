@@ -18,7 +18,7 @@ const baseDomains = [
   "osakastreetbites.services",
   "shoppiejapanclothes.info",
   "shinkansenfood.shop",
-  "hikokilove.online",
+  "hikokilove.us",
 ];
 
 const generateAllowedUrls = (domains) => {
