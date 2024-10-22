@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const firstList = ["shinkansenfood", "hikokilove"];
 const secondList = ["yuyadoonsen"];
 const thirdList = ["foodathome"];
-const fourthList = [];
+const fourthList = ["hotelroyaltonjp"];
 const fifthList = [];
 const sixthList = [];
 
@@ -19,6 +19,7 @@ const baseDomains = [
   "hikokilove.online",
   "yuyadoonsen.info",
   "foodathome.shop",
+  "hotelroyaltonjp.com",
 ];
 
 const generateAllowedUrls = (domains) => {
