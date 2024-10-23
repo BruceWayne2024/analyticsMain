@@ -6,20 +6,20 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const firstList = ["shinkansenfood", "hikokilove"];
+const firstList = ["shinkansenfood"];
 const secondList = ["yuyadoonsen"];
 const thirdList = ["foodathome"];
 const fourthList = ["hotelroyaltonjp"];
-const fifthList = [];
+const fifthList = ["samuraiyoga"];
 const sixthList = [];
 
 // Base domains for allowed origins and referrers
 const baseDomains = [
   "shinkansenfood.shop",
-  "hikokilove.online",
   "yuyadoonsen.info",
   "foodathome.shop",
   "hotelroyaltonjp.com",
+  "samuraiyoga.shop",
 ];
 
 const generateAllowedUrls = (domains) => {
