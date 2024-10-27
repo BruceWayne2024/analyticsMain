@@ -6,13 +6,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const firstList = ["shinkansenfood", "samuraiyoga"];
+const firstList = ["shinkansenfood", "samuraiyoga", "shoppiejapanclothes", "calmyogaandmeditation", "foodloverjapan"];
 const secondList = ["yuyadoonsen"];
 const thirdList = ["foodathome"];
 const fourthList = ["hotelroyaltonjp"];
-const fifthList = ["shoppiejapanclothes"];
-const sixthList = ["calmyogaandmeditation"];
-const seventhList = ["foodloverjapan"];
+const fifthList = [];
+const sixthList = [];
+const seventhList = [];
 
 // Base domains for allowed origins and referrers
 const baseDomains = [
